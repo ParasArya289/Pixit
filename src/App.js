@@ -1,11 +1,10 @@
 import "./App.css";
 
-function App() {
+export default function App() {
+  //explain this
   return (
     <div className="App">
       <h1>Pixit</h1>
     </div>
   );
 }
-
-export default App;
