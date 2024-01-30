@@ -1,0 +1,40 @@
+.search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+  color: var(--text-color);
+  padding: 0px 20px;
+  background-color: var(--blur-color);
+  border-radius: 6px;
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+}
+.search svg {
+  height: 15px;
+}
+.search input::placeholder {
+  color: var(--text-color);
+}
+.search form {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+.search form button {
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: medium;
+}
+.search input {
+  outline: none;
+  border: none;
+  flex: 1;
+  color: var(--text-color);
+  height: 40px;
+  font-size: medium;
+  background-color: transparent;
+}
