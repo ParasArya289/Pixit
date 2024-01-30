@@ -1,0 +1,28 @@
+.navbar {
+  position: sticky;
+  top: 40px;
+  right: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px;
+  margin-inline: 40px;
+  color: var(--text-color);
+  background-color: var(--blur-color);
+  border-radius: 999px;
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  z-index: 9;
+}
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navbar__links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-color);
+}
