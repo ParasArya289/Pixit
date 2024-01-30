@@ -1,0 +1,30 @@
+.home {
+  text-align: center;
+  margin: 0 auto;
+}
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  height: 100svh;
+  width: 100vw;
+  width: 100svw;
+  object-fit: cover;
+  z-index: -1;
+  background-color: red;
+}
+.home__childrens {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 100px;
+  flex: 1;
+}
+.home p {
+  margin-block: 100px 60px;
+  text-shadow: 1px 1px 14px rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+  font-size: max(5vw, 1.8rem);
+  font-weight: 800;
+}
