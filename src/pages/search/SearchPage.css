@@ -1,0 +1,29 @@
+.searchPage {
+  min-height: 100vh;
+  min-height: 100svh;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.searchPage__childrens {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1160px;
+  flex: 1;
+}
+.searchResults {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* padding: 10px; */
+  gap:10px;
+  width: 100%;
+  margin-top: 50px;
+  background-color: var(--blur-color);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+}
