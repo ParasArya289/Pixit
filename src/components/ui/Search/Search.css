@@ -2,7 +2,9 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  width: 50%;
+  box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  width: max(50%,300px);
   color: var(--text-color);
   padding: 0px 20px;
   background-color: var(--blur-color);
@@ -22,12 +24,12 @@
   justify-content: space-between;
 }
 .search form button {
-    background-color: transparent;
-    color: var(--text-color);
-    border: none;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: medium;
+  background-color: transparent;
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: medium;
 }
 .search input {
   outline: none;
