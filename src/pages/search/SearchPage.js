@@ -1,12 +1,14 @@
 import React from "react";
 import { Navbar } from "../../components/ui/Navbar/Navbar";
 import Search from "../../components/ui/Search/Search";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import "./SearchPage.css";
 
 const SearchPage = () => {
   const { background } = useSelector((state) => state.background);
+  const { searchResult } = useSelector((state) => state.searchResult);
+  console.log(searchResult);
   return (
     <div
       style={{
@@ -22,6 +24,7 @@ const SearchPage = () => {
       <div className="searchPage__childrens">
         <Navbar />
         <Search />
+
         <motion.div
           initial={{ y: "100vh", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -30,17 +33,27 @@ const SearchPage = () => {
           }}
           className="searchResults"
         >
-          {[...Array(10).fill(0)].map((el) => (
-            <div
-              style={{
-                width: "300px",
-                height: "400px",
-                backgroundColor: "grey",
-              }}
-            >
-              Content
-            </div>
-          ))}
+          <AnimatePresence mode="wait">
+            {searchResult?.hits?.map((image, index) => (
+              <motion.img
+                initial={{ opacity: 0, y: -10 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { delay: 0.8 },
+                }}
+                exit={{
+                  opacity: 0,
+                  y: 10,
+                  transition: { delay: 0.02 * index },
+                }}
+                transition={{ duration: 1 }}
+                key={image.webformatURL}
+                src={image.webformatURL}
+                alt={image.user}
+              />
+            ))}
+          </AnimatePresence>
         </motion.div>
       </div>
     </div>
