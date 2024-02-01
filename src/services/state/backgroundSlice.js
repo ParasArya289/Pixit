@@ -4,7 +4,6 @@ import axios from "axios";
 const pickRandomIndex = () => {
   return Math.floor(Math.random() * 200);
 };
-console.log(pickRandomIndex())
 
 export const fetchBackground = createAsyncThunk(
   "background/fetchBackground",
