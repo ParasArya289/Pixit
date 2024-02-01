@@ -10,7 +10,7 @@ export const fetchBackground = createAsyncThunk(
   "background/fetchBackground",
   async () => {
     const response = await axios.get(
-      "https://pixabay.com/api/?key=42128430-a5f2c1adfe1543c70380109ea&image_type=photo&pretty=true&orientation=horizontal&order=popular&min_width=1920&min_height=1080&per_page=200&q=dark"
+      "https://pixabay.com/api/?key=42128430-a5f2c1adfe1543c70380109ea&image_type=photo&pretty=true&orientation=horizontal&order=popular&min_width=1920&per_page=200&q=deep+sea"
     );
     return response.data.hits[pickRandomIndex()];
   }
