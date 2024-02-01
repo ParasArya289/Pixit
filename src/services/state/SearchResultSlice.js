@@ -9,7 +9,7 @@ export const fetchSearchResult = createAsyncThunk(
   "searchResult/fetchSearchResult",
   async (query) => {
     const response = await axios.get(
-      `https://pixabay.com/api/?key=42128430-a5f2c1adfe1543c70380109ea&image_type=photo&q=${formateQuery(
+      `https://pixabay.com/api/?key=42128430-a5f2c1adfe1543c70380109ea&per_page=20&image_type=photo&q=${formateQuery(
         query
       )}`
     );
