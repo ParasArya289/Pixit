@@ -3,7 +3,7 @@
   align-items: center;
   gap: 20px;
   box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   width: max(50%,300px);
   color: var(--text-color);
   padding: 0px 20px;
