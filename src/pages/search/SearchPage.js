@@ -4,6 +4,7 @@ import Search from "../../components/ui/Search/Search";
 import { AnimatePresence, motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import "./SearchPage.css";
+import { ImageDrawer } from "../../components/ui/Drawer/ImageDrawer";
 
 const SearchPage = () => {
   const { background } = useSelector((state) => state.background);
@@ -35,23 +36,26 @@ const SearchPage = () => {
         >
           <AnimatePresence mode="wait">
             {searchResult?.hits?.map((image, index) => (
-              <motion.img
-                initial={{ opacity: 0, y: -10 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  transition: { delay: 0.8 },
-                }}
-                exit={{
-                  opacity: 0,
-                  y: 10,
-                  transition: { delay: 0.02 * index },
-                }}
-                transition={{ duration: 1 }}
-                key={image.webformatURL}
-                src={image.webformatURL}
-                alt={image.user}
-              />
+              <ImageDrawer>
+                <motion.img
+                  class="rounded-full"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                    transition: { delay: 0.8 },
+                  }}
+                  exit={{
+                    opacity: 0,
+                    y: 10,
+                    transition: { delay: 0.02 * index },
+                  }}
+                  transition={{ duration: 1 }}
+                  key={image.webformatURL}
+                  src={image.webformatURL}
+                  alt={image.user}
+                />
+              </ImageDrawer>
             ))}
           </AnimatePresence>
         </motion.div>

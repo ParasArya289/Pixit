@@ -7,13 +7,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 40px;
+  padding: 20px 40px;
   color: var(--text-color);
   background-color: var(--blur-color);
   border-radius: 999px;
   backdrop-filter: var(--blur);
   -webkit-backdrop-filter: var(--blur);
   z-index: 9;
+}
+.navbar h4{
+  font-weight: 700;
 }
 .navbar__links {
   display: flex;

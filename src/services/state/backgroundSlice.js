@@ -1,17 +1,18 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const pickRandomIndex = () => {
-  return Math.floor(Math.random() * 200);
+const pickRandomIndex = (length) => {
+  return Math.floor(Math.random() * length);
 };
 
 export const fetchBackground = createAsyncThunk(
   "background/fetchBackground",
   async () => {
     const response = await axios.get(
-      "https://pixabay.com/api/?key=42128430-a5f2c1adfe1543c70380109ea&image_type=photo&pretty=true&orientation=horizontal&order=popular&min_width=1920&per_page=200&q=deep+sea"
+      "https://pixabay.com/api/?key=42128430-a5f2c1adfe1543c70380109ea&image_type=photo&pretty=true&orientation=horizontal&order=popular&min_width=1920&per_page=200&q=deep+ocean"
     );
-    return response.data.hits[pickRandomIndex()];
+    const length = response?.data?.hits?.length;
+    return response.data.hits[pickRandomIndex(length)];
   }
 );
 
